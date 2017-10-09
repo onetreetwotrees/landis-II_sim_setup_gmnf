@@ -1,0 +1,38 @@
+LandisData  Ecoregions
+
+>>         Map
+>> Active  Code  Name   Description
+>> ------  ----  -----  -----------
+no	0	0	"nonforest"
+yes	2	2	"text"
+yes	3	3	"text"
+yes	4	4	"text"
+yes	5	5	"text"
+yes	7	7	"text"
+yes	8	8	"text"
+yes	11	11	"text"
+yes	12	12	"text"
+yes	14	14	"text"
+yes	17	17	"text"
+yes	20	20	"text"
+yes	24	24	"text"
+yes	25	25	"text"
+yes	26	26	"text"
+yes	27	27	"text"
+yes	28	28	"text"
+yes	31	31	"text"
+yes	33	33	"text"
+yes	35	35	"text"
+yes	36	36	"text"
+yes	37	37	"text"
+yes	38	38	"text"
+yes	40	40	"text"
+yes	45	45	"text"
+yes	52	52	"text"
+yes	53	53	"text"
+yes	62	62	"text"
+yes	65	65	"text"
+yes	79	79	"text"
+yes	80	80	"text"
+yes	88	88	"text"
+

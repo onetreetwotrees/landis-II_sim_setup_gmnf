@@ -1,0 +1,515 @@
+LandisData "Biomass Harvest"
+
+Timestep 5
+
+ManagementAreas ..\..\gmnf_mgmt_macode3.bin
+
+Stands 		..\..\gmnf_stands_oid_x_mgmtoid_for_landis_v3.bin
+
+>>------------------------------------------------------------------------
+>>##################
+>> Remove Senescing plantations of red pine or norway spruce,leave young stuff behind.
+Prescription 	PlantationConversion
+StandRanking	Economic
+
+>>Species	EconomicRank	MinimumAge
+>>-------	-----------	----------
+PINURESI	100		70
+PICEABIE	100		70
+MinimumAge	60
+
+   ForestTypeTable  << Plantations should have mature trees on >= 60% of cells.
+>> Inclusion Rule	ageRange	percentCells	species
+    Optional		70-300		60		PINURESI 
+    Optional		70-300		60		PICEABIE
+
+SiteSelection	Complete
+CohortsRemoved	SpeciesList
+ ABIEBALS		30-200
+ ACERPENS		30-100
+ ACERRUBR		30-150
+ ACERSACC		30-350
+ BETUALLE		30-300
+ BETULENT		30-275
+ BETUPAPY		30-100
+ >>CARYCORD		20-200
+ >>CARYOVAT		AllExceptYoungest
+ FAGUGRAN		30-350
+ FRAXAMER		30-300
+ PICEABIE		All
+ PICERUBE		30-400
+ PINURESI		All
+ PINUSTRO		30-400
+ POPUGRAN		30-100
+ POPUTREM		30-100
+ PRUNPENS		5-35
+ PRUNSERO		30-250
+ QUERALBA		30-400
+ QUERRUBR		30-250
+ TILIAMER		30-250
+ TSUGCANA		30-500
+ 
+ >>------------------------------------------------------------------------
+ >>##################
+ >> Even-aged Clear Cuts with smaller size limits.
+ Prescription 	ClearCutSmall
+ StandRanking	Economic
+ 
+ >>Species	EconomicRank	MinimumAge
+ >>-------	-----------	----------
+ACERRUBR	70		80
+BETULENT	100		80
+BETUPAPY	70		60
+CARYCORD	100		80
+CARYOVAT	100		80
+FRAXAMER	100		80
+PINUSTRO	100		80
+POPUGRAN	70		60
+POPUTREM	70		60
+PRUNSERO	100		80
+QUERALBA	100		80
+QUERRUBR	100		80
+TILIAMER	100		80
+
+MinimumAge	60
+MaximumAge 	300
+
+StandAdjacency 10
+AdjacencyType StandAge
+  
+ForestTypeTable  << Midtolerant, stands dominated by mix other than northern hardwood stands.
+>> Inclusion Rule	ageRange	percentCells	species
+      Optional 		60-300		40		ACERRUBR BETULENT BETUPAPY CARYCORD CARYOVAT FRAXAMER PINUSTRO POPUGRAN POPUTREM PRUNSERO QUERALBA QUERRUBR TILIAMER
+      Optional 		60-300		40  		BETULENT BETUPAPY CARYCORD CARYOVAT FRAXAMER PINUSTRO POPUGRAN POPUTREM PRUNSERO QUERALBA QUERRUBR TILIAMER
+
+SiteSelection PartialStandSpread 8 8
+ 
+CohortsRemoved ClearCut
+
+>>------------------------------------------------------------------------
+>>##################
+>> Even-aged Clear Cuts with larger size limits.
+Prescription 	ClearCutLarge
+StandRanking	Random
+  
+MinimumAge	60
+MaximumAge 	300
+  
+StandAdjacency 10
+AdjacencyType StandAge
+    
+SiteSelection PartialStandSpread 12 12
+  
+CohortsRemoved ClearCut
+  
+>>------------------------------------------------------------------------
+>>##################
+>> Cut hardwood overstory to release softwood understory when enough softwood present.
+Prescription 	SoftwoodRelease
+StandRanking	Economic
+   
+>>Species	EconomicRank	MinimumAge
+>>-------	-----------	----------
+ABIEBALS	100		30
+PICERUBE	100		30
+PINUSTRO	100		30
+TSUGCANA	100		30
+
+MinimumAge	90
+
+ForestTypeTable  << Mixed woods, young softwoods make up at least 30%.
+>> Inclusion Rule	ageRange	percentCells	species
+    Optional		10-50		30		PICERUBE PICEABIE ABIEBALS 
+    Optional		10-50		30		PINUSTRO TSUGCANA PICERUBE
+
+SiteSelection	Complete
+CohortsRemoved	SpeciesList
+ >>ABIEBALS		All
+ ACERPENS		All
+ ACERRUBR		All
+ ACERSACC		All
+ BETUALLE		All
+ BETULENT		All
+ BETUPAPY		All
+ >>CARYCORD		20-200
+ >>CARYOVAT		AllExceptYoungest
+ FAGUGRAN		All
+ FRAXAMER		All
+ >>PICEABIE		All
+ >>PICERUBE		All
+ >>PINURESI		All
+ >>PINUSTRO		All
+ POPUGRAN		All
+ POPUTREM		All
+ PRUNPENS		All
+ PRUNSERO		All
+ QUERALBA		All
+ QUERRUBR		All
+ TILIAMER		All
+ >>TSUGCANA		All
+ 
+ >>------------------------------------------------------------------------
+ >>##################
+ Prescription 	GroupSelection
+ StandRanking	Economic
+    
+ >>Species	EconomicRank	MinimumAge
+ >>-------	-----------	----------
+ACERSACC	100		100
+BETUALLE	100		100
+FAGUGRAN	100		40
+
+MinimumAge	90
+ 
+ ForestTypeTable  << Young beech understory must not be present
+ >> Inclusion Rule	ageRange	percentCells	species
+    Forbidden 		1-40		20		FAGUGRAN
+ 
+ SiteSelection	PatchCutting 50% 0.27 
+ >> PatchSize >> Add PatchSize keyword if updating to Base Harvest v3
+ >> 0.81 ha ~ 2 acre patch constraint (in ha), set < to 1 acre for now
+ 
+ CohortsRemoved	SpeciesList
+  ABIEBALS		All
+  ACERPENS		All
+  ACERRUBR		All
+  ACERSACC		All
+  BETUALLE		All
+  BETULENT		All
+  BETUPAPY		All
+  >>CARYCORD		20-200
+  >>CARYOVAT		AllExceptYoungest
+  FAGUGRAN		All
+  FRAXAMER		All
+  PICEABIE		All
+  PICERUBE		All
+  PINURESI		All
+  PINUSTRO		All
+  POPUGRAN		All
+  POPUTREM		All
+  PRUNPENS		All
+  PRUNSERO		All
+  QUERALBA		All
+  QUERRUBR		All
+  TILIAMER		All
+  TSUGCANA		All
+  
+>>------------------------------------------------------------------------
+>>##################
+Prescription 	GroupSelectionBeechUnderstory
+StandRanking	Economic
+    
+>>Species	EconomicRank	MinimumAge
+>>-------	-----------	----------
+ACERSACC	100		100
+BETUALLE	100		100
+FAGUGRAN	100		5
+
+MinimumAge	90
+ 
+ForestTypeTable  << Young beech understory must BE present
+>> Inclusion Rule	ageRange	percentCells	species
+    Required 		5-40		highest		FAGUGRAN
+ 
+SiteSelection	PatchCutting 50% 0.80
+>> PatchSize >> Add PatchSize keyword if updating to Base Harvest v3
+>> 0.81 ha ~ 2 acre patch constraint (in ha), set < to 1 acre for now
+ 
+CohortsRemoved	SpeciesList
+  ABIEBALS		All
+  ACERPENS		All
+  ACERRUBR		All
+  ACERSACC		All
+  BETUALLE		All
+  BETULENT		All
+  BETUPAPY		All
+  >>CARYCORD		20-200
+  >>CARYOVAT		AllExceptYoungest
+  FAGUGRAN		All
+  FRAXAMER		All
+  PICEABIE		All
+  PICERUBE		All
+  PINURESI		All
+  PINUSTRO		All
+  POPUGRAN		All
+  POPUTREM		All
+  PRUNPENS		All
+  PRUNSERO		All
+  QUERALBA		All
+  QUERRUBR		All
+  TILIAMER		All
+  TSUGCANA		All
+
+>>------------------------------------------------------------------------
+>>##################
+Prescription 	OakShelterWood
+StandRanking	Economic
+
+>>Species	EconomicRank	MinimumAge
+QUERALBA	100		80
+QUERRUBR	100		80
+
+MinimumAge 80
+
+ForestTypeTable  << Appropriate for stands with sexually mature oak over 30% of cells
+>> Inclusion Rule	ageRange	percentCells	species
+    Optional 		50-375		30		QUERALBA
+    Optional		25-250		30		QUERRUBR
+
+SiteSelection	Complete
+
+CohortsRemoved	SpeciesList
+ABIEBALS 	All
+ACERPENS 	All
+ACERRUBR 	All
+ACERSACC 	All
+BETUALLE 	All
+BETULENT 	All
+BETUPAPY 	All
+CARYCORD 	AllExceptOldest
+CARYOVAT 	AllExceptOldest
+FAGUGRAN 	All
+FRAXAMER 	All
+PICEABIE 	All
+PICERUBE 	All
+PINURESI 	All
+PINUSTRO 	All
+POPUGRAN 	All
+POPUTREM 	All
+PRUNPENS 	All
+PRUNSERO 	All
+QUERALBA 	1-39 (0%) 40-375 (20%)
+QUERRUBR 	1-39 (0%) 40-250 (20%)
+TILIAMER 	All
+TSUGCANA 	All
+
+SingleRepeat  	15
+CohortsRemoved	SpeciesList
+ABIEBALS 	All
+ACERPENS 	All
+ACERRUBR 	All
+ACERSACC 	All
+BETUALLE 	All
+BETULENT 	All
+BETUPAPY 	All
+CARYCORD 	AllExceptYoungest
+CARYOVAT 	AllExceptYoungest
+FAGUGRAN 	All
+FRAXAMER 	All
+PICEABIE 	All
+PICERUBE 	All
+PINURESI 	All
+PINUSTRO 	All
+POPUGRAN 	All
+POPUTREM 	All
+PRUNPENS 	All
+PRUNSERO 	All
+QUERALBA 	AllExceptYoungest
+QUERRUBR 	AllExceptYoungest
+TILIAMER 	All
+TSUGCANA 	All
+
+>>------------------------------------------------------------------------
+>>##################
+Prescription 	NHWShelterwood
+StandRanking	Economic
+
+>>Species	EconomicRank	MinimumAge
+ACERSACC	100		80
+FAGUGRAN	100		80
+BETUALLE	100		80
+BETULENT	100		80
+TILIAMER	100		80
+
+MinimumAge 80
+
+ForestTypeTable  << Appropriate for stands with sexually mature oak over 30% of cells
+>> Inclusion Rule	ageRange	percentCells	species
+    Optional 		40-335		70		ACERSACC
+    Optional		40-275		70		BETUALLE
+    Optional		40-250		50		BETULENT
+    Optional		40-335		70		FAGUGRAN
+    Optional		30-235		50		FAGUGRAN
+
+SiteSelection	Complete
+
+CohortsRemoved	SpeciesList
+ABIEBALS 	All
+ACERPENS 	All
+ACERRUBR 	All
+ACERSACC 	1-39 (0%) 40-350 (20%)
+BETUALLE 	1-39 (0%) 40-300 (20%)
+BETULENT 	1-39 (0%) 40-275 (20%)
+BETUPAPY	All
+CARYCORD 	1-39 (0%) 40-200 (20%)
+CARYOVAT 	1-39 (0%) 40-300 (20%)
+FAGUGRAN 	1-39 (0%) 40-350 (20%)
+FRAXAMER 	All
+PICEABIE 	All
+PICERUBE 	All
+PINURESI 	All
+PINUSTRO 	All
+POPUGRAN 	All
+POPUTREM 	All
+PRUNPENS 	All
+PRUNSERO 	All
+QUERALBA 	1-39 (0%) 40-400 (20%)
+QUERRUBR 	1-39 (0%) 40-250 (20%)
+TILIAMER 	1-39 (0%) 40-500 (20%)
+TSUGCANA 	All
+
+SingleRepeat  	15
+CohortsRemoved	SpeciesList
+ABIEBALS 	All
+ACERPENS 	All
+ACERRUBR 	All
+ACERSACC 	AllExceptYoungest
+BETUALLE 	AllExceptYoungest
+BETULENT 	AllExceptYoungest
+BETUPAPY 	All
+CARYCORD 	AllExceptYoungest
+CARYOVAT 	AllExceptYoungest
+FAGUGRAN 	AllExceptYoungest
+FRAXAMER 	All
+PICEABIE 	All
+PICERUBE 	All
+PINURESI 	All
+PINUSTRO 	All
+POPUGRAN 	AllExceptYoungest
+POPUTREM 	AllExceptYoungest
+PRUNPENS 	All
+PRUNSERO 	AllExceptYoungest
+QUERALBA 	AllExceptYoungest
+QUERRUBR 	AllExceptYoungest
+TILIAMER 	All
+TSUGCANA 	All
+
+>>------------------------------------------------------------------------
+>>##################
+Prescription 	NHWSingleTreeSelection
+StandRanking	Economic
+
+>>Species	EconomicRank	MinimumAge
+ACERSACC	100		80
+BETUALLE	100		80
+BETULENT	100		80
+TILIAMER	100		80
+
+MinimumAge 80
+
+ForestTypeTable  << Appropriate for stands with sexually mature oak over 30% of cells
+>> Inclusion Rule	ageRange	percentCells	species
+    Optional 		40-335		70		ACERSACC
+    Optional		40-275		70		BETUALLE
+    Optional		40-250		50		BETULENT
+    Forbidden 		1-350		50		FAGUGRAN
+
+SiteSelection	Complete
+
+CohortsRemoved	SpeciesList
+ABIEBALS 	1-59 (0%) 60-500 (30%)
+ACERPENS 	1-59 (0%) 60-500 (30%)
+ACERRUBR 	1-59 (0%) 60-500 (30%)
+ACERSACC 	1-39 (0%) 40-350 (30%)
+BETUALLE 	1-39 (0%) 40-300 (30%)
+BETULENT 	1-39 (0%) 40-275 (30%)
+BETUPAPY	1-59 (0%) 60-500 (30%)
+CARYCORD 	1-39 (0%) 40-200 (30%)
+CARYOVAT 	1-39 (0%) 40-300 (30%)
+FAGUGRAN 	1-39 (0%) 40-350 (30%)
+FRAXAMER 	1-59 (0%) 60-500 (30%)
+PICEABIE 	1-59 (0%) 60-500 (30%)
+PICERUBE 	1-59 (0%) 60-500 (30%)
+PINURESI 	1-59 (0%) 60-500 (30%)
+PINUSTRO 	1-59 (0%) 60-500 (30%)
+POPUGRAN 	1-59 (0%) 60-500 (30%)
+POPUTREM 	1-59 (0%) 60-500 (30%)
+PRUNPENS 	1-59 (0%) 60-500 (30%)
+PRUNSERO 	1-59 (0%) 60-500 (30%)
+QUERALBA 	1-39 (0%) 40-400 (30%)
+QUERRUBR 	1-39 (0%) 40-250 (30%)
+TILIAMER 	1-39 (0%) 40-500 (30%)
+TSUGCANA 	1-59 (0%) 60-500 (30%)
+
+MultipleRepeat  	15
+
+
+>>------------------------------------------------------------------------
+>>-----------------------------------------------------------------
+>> HARVEST IMPLEMENTATION TABLE
+>> The following table defines which management units (defined in the
+>> ManagementArea file) are treated by which prescription(s).
+
+  HarvestImplementations
+
+>> Mgmt Area Prescription Harvest Area Begin Time End Time
+>> --------- ------------ ------------ ---------- --------
+>> 31 = Diverse Forest Use
+    31  ClearCutLarge			0.4% 
+    31  SoftwoodRelease			0.2%
+    31  PlantationConversion		0.2%
+    31  GroupSelection			0.2%
+    31  GroupSelectionBeechUnderstory	0.2%
+    31  OakShelterWood			0.05%
+    31   NHWShelterwood			0.05%
+    31  NHWSingleTreeSelection		0.025%
+>> 62 = Diverse Backcountry	
+    62	ClearCutSmall			0.6% 	
+    62  PlantationConversion		0.1%
+    62  SoftwoodRelease			0.1%
+    62  GroupSelection			0.1%
+    62  GroupSelectionBeechUnderstory	0.1%
+    62  OakShelterWood			0.05%
+    62  NHWShelterwood			0.05%
+>> 85 = Green Mountain Escarpment *** 8.5
+    85  ClearCutSmall			0.15%  	
+    85  SoftwoodRelease			0.15%
+    85  PlantationConversion		0.15%
+    85  GroupSelection			0.005%
+    85  GroupSelectionBeechUnderstory	0.005%
+    85  OakShelterWood			0.005%
+    85   NHWShelterwood			0.005%
+    85  NHWSingleTreeSelection		0.005%
+>> 89 = Moosalamoo Recreation and Educ. Area *** 8.9
+    89  ClearCutSmall			0.2%  	
+    89  SoftwoodRelease			0.1%
+    89  PlantationConversion		0.1%
+    89  GroupSelection			0.1%
+    89  GroupSelectionBeechUnderstory	0.1%
+    89  OakShelterWood			0.025%
+    89   NHWShelterwood			0.025%
+>> 63 =  Remote Wildlife Habitat *** 6.3
+    63	ClearCutSmall			0.3% 	
+    63  PlantationConversion		0.05%
+    63  SoftwoodRelease			0.05%
+    63  GroupSelection			0.05%
+    63  GroupSelectionBeechUnderstory	0.05%
+    63  OakShelterWood			0.025%
+    63  NHWShelterwood			0.025%
+
+>> GMNF Mgmt area codes and names...
+>>93 						>>Alpine Ski Areas Expansion 9.3
+>>71						>> Alpine Ski Areas 7.1
+>>						>> Alpine/Subalpine Special Areas
+>>81						>> Appalachian National Scenic Area 8.1
+>>62						>> Diverse Backcountry *** 6.2
+>>31 						>> Diverse Forest Use *** 3.1
+>>87						>> Ecological Special Area 8.7
+>>						>> Existing and Candidate Res. Natural Areas
+>>85						>> Green Mountain Escarpment *** 8.5
+>>82						>> Long National Recreation Trail 8.2
+>>89						>> Moosalamoo Recreation and Educ. Area *** 8.9
+>> 						>> Recreation Special Area
+>>61						>> Remote Backcountry Forest 6.1
+>>63						>> Remote Wildlife Habitat *** 6.3
+>>83						>> Robert T Stafford White Rocks National Rec. Area 8.3
+>>51						>> Wilderness 5.1
+>>						>> Wilderness Study Area
+
+>>------------------------------------------------------------------------
+>> OUTPUT FILES
+
+PrescriptionMaps 	harvest/prescripts-{timestep}.bin
+EventLog 		harvest/event-log.csv
+SummaryLog 		harvest/summary-log.csv
+>>------------------------------------------------------------------------

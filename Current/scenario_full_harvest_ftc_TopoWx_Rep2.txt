@@ -1,0 +1,36 @@
+LandisData  Scenario
+
+Duration  190
+
+Species   	..\..\species_GMNF_change_shade.txt
+
+Ecoregions      ..\..\ecoregions_GMNF.txt
+EcoregionsMap   ..\..\gmnf_soils_map_masked2.bin
+
+CellLength  30 << meters, 100 x 100 m = 1 ha, 30 x 30 m = 900 m2
+
+
+>> Succession Extension     Initialization File
+>> --------------------     -------------------
+   "Biomass Succession vJRF"    ..\biomass-succession_SetUp_GMNF_TopoWx_Rep2.txt
+
+
+>> Disturbance Extensions   Initialization File
+>> ----------------------   -------------------
+   "Base Wind"		    ..\..\base-wind.txt
+   "Biomass Insects"	    ..\..\biomass-insects_SetUp_FTC.txt
+>>   "Base Harvest"	    ..\..\harvest_prescriptions_GMNF_test.txt
+    "Biomass Harvest"	    ..\..\biomass-harvest_SetUp_GMNF.txt	
+
+>>   DisturbancesRandomOrder  yes  << optional parameter; default = no
+
+
+>> Other Extensions         Initialization File
+>> ----------------         -------------------
+   "Output Cohort Statistics"	..\..\output_CohortStats.txt
+   "Output Biomass Reclass"	..\..\output_BiomassReclass.txt
+   "Output Biomass"		..\..\output-Biomass.txt
+
+
+>>RandomNumberSeed  5,757  << optional parameter; default = the seed is
+ RandomNumberSeed  8,474  << randomly generated using the current time

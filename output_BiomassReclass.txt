@@ -1,0 +1,28 @@
+LandisData  "Output Biomass Reclass"
+
+Timestep   1
+
+
+ReclassMaps
+
+>> Map Name    Forest Type    Species
+>> --------    -------------  -------
+   reclass1 -> SugarMaple  ACERSACC
+	       Beech FAGUGRAN 
+	       YellowBirch BETUALLE
+	       SpruceFir  ABIEBALS PICERUBE BETUPAPY
+ 	       FirBirch	  ABIEBALS BETUPAPY
+	       TransSpruce  PICERUBE BETUALLE ACERPENS
+               WhitePine  PINUSTRO
+	       OakWhitePine QUERRUBR QUERALBA PINUSTRO CARYCORD CARYOVAT
+	       OakMapleHemlock	QUERRUBR QUERALBA ACERRUBR TSUGCANA
+	       NorwaySpruce PICEABIE
+	       EarlySuccessional PRUNPENS PRUNSERO BETUPAPY POPUTREM POPUGRAN
+	       MesicHardwoods FRAXAMER TILIAMER QUERRUBR BETULENT
+	       RedPine	PINURESI
+>>             Other POPUTREM POPUGRAN TILIAMER FRAXAMER BETULENT
+               Poplar	POPUTREM POPUGRAN 
+	       OtherMesic TILIAMER FRAXAMER BETULENT
+
+
+MapFileNames   output/{reclass-map-name}-{timestep}.bin
