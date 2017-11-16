@@ -1,0 +1,56 @@
+ENVI
+description = {
+  Applied Mask Result [Mon Jul 18 17:09:29 2016]}
+samples = 1711
+lines   = 5564
+bands   = 1
+header offset = 0
+file type = ENVI Classification
+data type = 2
+interleave = bsq
+sensor type = Unknown
+classes = 101
+class lookup = {
+   0,   0,   0,   0,   0, 139,   0,   0, 255, 255,   0, 255, 243, 246, 213,
+ 216, 191, 216, 255,   0, 255, 176,  48,  96,  46, 139,  87, 160,  32, 240,
+ 255, 127,  80,   0,   0, 255, 218, 112, 214, 160,  82,  45,   0, 174, 255,
+ 216, 191, 216, 238,   0,   0,  77, 231,  99, 139,   0,   0,   0, 238,   0,
+ 244, 241,   0,   0, 139,   0,   0,   0, 238,   0,   0, 205, 255,   0,   0,
+   0,   0,   0, 205, 205,   0, 139, 139,   0,   0, 238, 238,   0, 205, 205,
+   0, 139, 139, 238,   0, 238, 205,   0, 205, 139,   0, 139, 238,  48, 167,
+ 205,  41, 144, 139,  28,  98, 145,  44, 238, 125,  38, 205,  85,  26, 139,
+ 255, 165,   0, 238, 154,   0, 205, 133,   0, 139,  90,   0, 238, 121,  66,
+ 205, 104,  57, 139,  71,  38, 238, 210, 238, 205, 181, 205,   0,   0,   0,
+ 255, 255, 255, 255,   0,   0, 255, 127,  80, 139,   0,   0, 255, 255,   0,
+   0, 255, 255, 255,   0, 255, 176,  48,  96,  46, 139,  87, 160,  32, 240,
+ 255, 127,  80, 127, 255, 212, 218, 112, 214, 160,  82,  45, 127, 255,   0,
+ 205,   0,   0, 238,   0,   0, 205,   0,   0, 139,   0,   0,   0, 238,   0,
+   0, 205,   0,   0, 139,   0,   0,   0, 238,   0,   0, 205,   0,   0, 139,
+ 238, 238,   0, 205, 205,   0, 139, 139,   0,   0, 238, 238,   0, 205, 205,
+   0, 139, 139, 238,   0, 238, 205,   0, 205, 139,   0, 139, 238,  48, 167,
+ 205,  41, 144, 139,  28,  98, 145,  44, 238, 125,  38, 205,  85,  26, 139,
+ 255, 165,   0, 238, 154,   0, 205, 133,   0, 139,  90,   0, 238, 121,  66,
+ 205, 104,  57, 139,  71,  38, 238, 210, 238, 205, 181, 205,   0,   0,   0,
+ 255, 255, 255}
+class names = {
+ Unclassified, Class 1, Class 2, Class 3, Class 4, Class 5, Class 6, 
+ Class 7, Class 8, Class 9, Class 10, Class 11, Class 12, Class 13, 
+ Class 14, Class 15, Class 16, Class 17, Class 18, Class 19, Class 20, 
+ Class 21, Class 22, Class 23, Class 24, Class 25, Class 26, Class 27, 
+ Class 28, Class 29, Class 30, Class 31, Class 32, Class 33, Class 34, 
+ Class 35, Class 36, Class 37, Class 38, Class 39, Class 40, Class 41, 
+ Class 42, Class 43, Class 44, Class 45, Class 46, Class 47, Class 48, 
+ Class 49, Class 50, Class 51, Class 52, Class 53, Class 54, Class 55, 
+ Class 56, Class 57, Class 58, Class 59, Class 60, Class 61, Class 62, 
+ Class 63, Class 64, Class 65, Class 66, Class 67, Class 68, Class 69, 
+ Class 70, Class 71, Class 72, Class 73, Class 74, Class 75, Class 76, 
+ Class 77, Class 78, Class 79, Class 80, Class 81, Class 82, Class 83, 
+ Class 84, Class 85, Class 86, Class 87, Class 88, Class 89, Class 90, 
+ Class 91, Class 92, Class 93, Class 94, Class 95, Class 96, Class 97, 
+ Class 98, Class 99, Class 100}
+byte order = 0
+map info = {UTM, 1.000, 1.000, 636578.672, 4896698.886, 3.0000000000e+001, 3.0000000000e+001, 18, North, WGS-84, units=Meters}
+coordinate system string = {PROJCS["UTM_Zone_18N",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",-75.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]}
+wavelength units = Unknown
+band names = {
+ Mask (Mask (Layer (Band 1:gmnf_soil_topo_4_iso_50-100_combine_30_hclust.dat):gmnf_stack_ldf_class_v16_and_soils_map):gmnf_soils_map_masked)}

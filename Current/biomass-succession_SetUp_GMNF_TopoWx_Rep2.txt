@@ -112,7 +112,7 @@ TSUGCANA	3		  0.028		7		0.8	0.2
    80	530
    88	530
 
-DynamicInputFile			..\..\biomass_succession_dynamic_inputs_TopoWx.txt 	 
+DynamicInputFile			..\..\biomass_succession_dynamic_inputs_TopoWx_Rep2.txt 	 
 AgeOnlyDisturbances:BiomassParameters  	..\..\biomass-succession_Age-Only-Disturbances.txt
 
 
