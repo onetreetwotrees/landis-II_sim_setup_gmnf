@@ -1,0 +1,6 @@
+2017-10-12 17:18:45,553 - LANDIS-II 6.2 (official release)
+2017-10-12 17:18:45,567 - 
+2017-10-12 17:18:45,921 - Loading scenario from file "F:\Landis_runs\gmnf\RCP45\Rep1\scenario_full_GMNF_NEX_CESM1-BGC_45_Rep1.txt" ...
+2017-10-12 17:18:46,008 - Initialized random number generator with user-supplied seed = 5,757
+2017-10-12 17:18:46,009 - Loading species data from file "..\..\species_GMNF_change_shade.txt" ...
+2017-10-12 17:18:46,011 - Error: The file ..\..\species_GMNF_change_shade.txt does not exist

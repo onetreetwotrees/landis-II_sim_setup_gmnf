@@ -1,0 +1,32 @@
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','CARYCORD',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','ABIEBALS',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','ACERPENS',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','ACERRUBR',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','ACERSACC',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','BETUALLE',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','BETULENT',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','BETUPAPY',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','CARYOVAT',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','FAGUGRAN',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','FRAXAMER',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','PICEABIE',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','PICERUBE',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','PINURESI',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','PINUSTRO',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','POPUGRAN',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','POPUTREM',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','PRUNPENS',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','PRUNSERO',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','QUERALBA',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','QUERRUBR',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','TILIAMER',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','TSUGCANA',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','woody',1711,5564
+read_files_and_make_file_stack_bin_to_int, 'F:\Landis_runs\gmnf\Current\Rep1\output\biomass','TotalBiomass',1711,5564
+
+read_files_and_make_file_stack, 'F:\Landis_runs\gmnf\Current\Rep1\output\cohorts','AGECOUNT',1711,5564
+read_files_and_make_file_stack, 'F:\Landis_runs\gmnf\Current\Rep1\output\cohorts','AGEMIN',1711,5564
+read_files_and_make_file_stack, 'F:\Landis_runs\gmnf\Current\Rep1\output\cohorts','AGEMED',1711,5564
+read_files_and_make_file_stack, 'F:\Landis_runs\gmnf\Current\Rep1\output\cohorts','AGEMAX',1711,5564
+read_files_and_make_file_stack, 'F:\Landis_runs\gmnf\Current\Rep1\output\cohorts','AGERICH',1711,5564
+
